@@ -10,7 +10,7 @@ const App = () => {
     <><div className='container'>
       <div className='divOne'>
         <img src='/images/ben.jpeg'></img>
-        <h1>Ben Alefosio</h1>
+        <h1>BEN ALEFOSIO</h1>
       </div>
       <div className='divTwo'>
         {newData.map(element => {

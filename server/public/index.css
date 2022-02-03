@@ -1,6 +1,17 @@
-
+@font-face {
+    font-family: Jokerman;
+    src:url(Jokerman.ttf);
+}
 
 .container{
+    font-family: 'Jokerman';
+    font-size: 15pt;  
+    color: orange;
     display: flex;
     justify-content: space-around;
 }
+
+body {
+    background-color: cornflowerblue
+}
+
