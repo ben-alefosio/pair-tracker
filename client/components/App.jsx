@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import Student from './Students'
-import studentData from '../../server/db/db.json'
+
+import studentData from '../../server/db/data.json'
 
 const App = () => {
-  const studData = Object.keys(studentData)
   const newData = studentData.Students
 
-  console.log(studData)
   console.log(newData)
   return (
     <><div className='container'>
