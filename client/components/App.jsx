@@ -1,24 +1,31 @@
-import React, {useState, useEffect} from 'react'
-import {getGreeting} from '../apiClient'
+import React, { useState, useEffect } from 'react'
+import Student from './Students'
+import studentData from '../../server/db/db.json'
 
 const App = () => {
+  const studData = Object.keys(studentData)
+  const newData = studentData.Students
 
-  const [greeting, setGreeting] = useState('')
-  const [count, setCount] = useState(0)
-
-  useEffect(() => {
-    getGreeting()
-      .then((greeting) => {
-        console.log(greeting)
-        setGreeting(greeting)
-      })
-  }, [count])
-
+  console.log(studData)
+  console.log(newData)
   return (
-    <>
-    {count}
-    <h1>{greeting}</h1>
-    <button onClick={() => setCount(count + 1)}>Click</button>
+    <><div className='container'>
+      <div className='divOne'>
+        <img src='/images/ben.jpeg'></img>
+        <h1>Ben Alefosio</h1>
+      </div>
+      <div className='divTwo'>
+        {newData.map(element => {
+          return <li><button>{element.name}</button></li>
+        })}
+        {/* Map students filter by pairing false,
+if false display /li */}
+      </div>
+      <div className='divThree'>
+        {/* Map students filter by pairing true,
+if true display /li */}
+      </div>
+    </div>
     </>
   )
 }
