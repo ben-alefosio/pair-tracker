@@ -3,10 +3,19 @@ import React, { useState, useEffect } from 'react'
 import studentData from '../../server/db/data.json'
 
 const App = () => {
-  const newData = studentData.Students
+  const [state, setState] = useState(studentData.Students)
+  function handleClick (id) {
+    const updatedState = state
+   .map(item => item.id === id
+   ?({ ...item, paired: !item.paired})
+   : item)
+   setState(updatedState)
+  }
 
-  const paired = newData.filter(item => item.paired === true)
-  const notPaired = newData.filter(item => item.paired === false)
+  // const newData = studentData.Students
+
+  const paired = state.filter(item => item.paired === true)
+  const notPaired = state.filter(item => item.paired === false)
   console.log(paired)
   console.log(notPaired)
 
@@ -25,13 +34,13 @@ const App = () => {
         <div className='divTwo'>
           <h1>Paired</h1>
           {paired.map(element => {
-            return <li><button>{element.name}</button></li>
+            return <li><button onClick = {() => handleClick(element.id)}>{element.name}</button></li>
           })}
         </div>
         <div className='divThree'>
           <h1>Not Paired Yet</h1>
           {notPaired.map(element => {
-            return <li><button>{element.name}</button></li>
+            return <li><button onClick = {() => handleClick(element.id)}>{element.name}</button></li>
           })}
         </div>
       </div>
