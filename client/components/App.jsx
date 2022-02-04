@@ -6,10 +6,10 @@ const App = () => {
   const [state, setState] = useState(studentData.Students)
   function handleClick (id) {
     const updatedState = state
-   .map(item => item.id === id
-   ?({ ...item, paired: !item.paired})
-   : item)
-   setState(updatedState)
+      .map(item => item.id === id
+        ? ({ ...item, paired: !item.paired })
+        : item)
+    setState(updatedState)
   }
 
   // const newData = studentData.Students
@@ -32,15 +32,16 @@ const App = () => {
           <h1>BEN ALEFOSIO</h1>
         </div>
         <div className='divTwo'>
-          <h1>Paired</h1>
+          <h1 id="abc">Paired</h1>
           {paired.map(element => {
-            return <li><button onClick = {() => handleClick(element.id)}>{element.name}</button></li>
+            return <ul><img className='images'src={`/images/${element.photo}`}></img><button onClick = {() => handleClick(element.id)}>{element.name}</button></ul>
           })}
         </div>
         <div className='divThree'>
           <h1>Not Paired Yet</h1>
           {notPaired.map(element => {
-            return <li><button onClick = {() => handleClick(element.id)}>{element.name}</button></li>
+            return <ul><img className='images'src={`/images/${element.photo}`}></img><button onClick = {() => handleClick(element.id)}>{element.name}</button>
+            </ul>
           })}
         </div>
       </div>
