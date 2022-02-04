@@ -4,7 +4,11 @@ import studentData from '../../server/db/data.json'
 
 const App = () => {
   const newData = studentData.Students
-  console.log(newData)
+
+  const paired = newData.filter(item => item.paired === true)
+  const notPaired = newData.filter(item => item.paired === false)
+  console.log(paired)
+  console.log(notPaired)
 
   // Function
 
@@ -19,15 +23,14 @@ const App = () => {
           <h1>BEN ALEFOSIO</h1>
         </div>
         <div className='divTwo'>
-          <h1>Not Paired Yet</h1>
-          {newData.map(element => {
+          <h1>Paired</h1>
+          {paired.map(element => {
             return <li><button>{element.name}</button></li>
           })}
-
         </div>
         <div className='divThree'>
-          <h1>Paired</h1>
-          {newData.map(element => {
+          <h1>Not Paired Yet</h1>
+          {notPaired.map(element => {
             return <li><button>{element.name}</button></li>
           })}
         </div>
