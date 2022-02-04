@@ -51,7 +51,7 @@
     {
       "id": 9,
       "name": "Jinny",
-      "photo": "9.jpeg",
+      "photo": "9.png",
       "paired": true
     },
     {
@@ -69,13 +69,13 @@
     {
       "id": 12,
       "name": "Kate Turnbull",
-      "photo": "12.jpeg",
+      "photo": "12.png",
       "paired": true
     },
     {
       "id": 13,
       "name": "Nikhita",
-      "photo": "13.jpeg",
+      "photo": "13.png",
       "paired": false
     },
     {
@@ -87,7 +87,7 @@
     {
       "id": 15,
       "name": "Ryan",
-      "photo": "15.jpeg",
+      "photo": "15.png",
       "paired": false
     },
     {
