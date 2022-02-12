@@ -40,8 +40,7 @@ const App = () => {
         <div className='divThree'>
           <h1 style={{ color: 'lime' }}> Not Paired Yet</h1>
           {notPaired.map(element => {
-            return <ul><img className='images'src={`/images/${element.photo}`}></img><button onClick = {() => handleClick(element.id)}>{element.name}</button>
-            </ul>
+            return <ul><img className='images' src={`/images/${element.photo}`}></img><button onClick = {() => handleClick(element.id)}>{element.name}</button></ul>
           })}
         </div>
       </div>

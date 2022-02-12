@@ -78,3 +78,46 @@ h1{
 #abc {
     margin-left: 1cm;
 }
+
+@media (max-width:320px) {
+    .divOne {
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+    .userPhoto {
+        border-radius: 106px;
+    height: 128px;
+    width: 128px;
+    }
+ body {
+     background-color: whitesmoke;
+     flex-wrap:wrap;
+     justify-content: center;
+    }
+}
+/* ///mobile portrait/// */
+
+@media (min-width:768px) {
+    .divOne {
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+    body {
+        background-color: orchid;
+        flex-wrap:wrap;
+        justify-content: center;
+       }
+   }
+/* ///tablet portrait/// */
+
+@media (min-width:1200px) {
+    .divOne {
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+    body {
+        background-color: darkolivegreen;
+        justify-content: center;
+       }
+   }
+/* ///desktop portrait/// */
